@@ -4,21 +4,13 @@
   <h1 align="center">🚀 Space Travelers' Hub</h1>
 
    <p align="center">
-	 
+    A place for Rokects and Missions.
    </p>
-   <ul>
-   <li>Rocket's section. </li>
-   <li>Missions section.  </li>
-   <li>My profile section. </li>
-   </ul>
-   <br />
    <a href="#"><strong>Explore the docs »</strong></a>
    <br />
-
    <a href="#">Live Demo</a>
    ·
    <a href="https://github.com/Cathella/react-group-project/issues">Report Bug</a>
-
    ·
    <a href="https://github.com/Cathella/react-group-project/issues">Request Feature</a>
 </p>
@@ -50,7 +42,7 @@
 
 ## About The Project
 
-	We will be working with the real live data from the SpaceX API. This task is to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+We will be working with the real live data from the SpaceX API. This task is to build a web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
 
 ### Built With
 
@@ -59,7 +51,7 @@
 - [CSS](https://www.w3schools.com/css/)
 - [JS](https://www.javascript.com/)
 
-# Author
+# Authors:
 
 👤 **Nakitto Catherine**
 
@@ -67,7 +59,7 @@
 - Twitter: [@Nakitto Catherine](https://twitter.com/cathella9 )
 - LinkedIn: [Nakitto Catherine](https://www.linkedin.com/in/nakitto-catherine2020/ )
 
-# Author
+#
 
 👤 **Carlos Flores**
 
