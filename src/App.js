@@ -2,7 +2,7 @@ import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav/Nav';
 import store from './redux/configurateStore';
-import Profile from './components/Profile/Profile';
+import Rockets from './components/Rockets/Rockets';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Router>
         <Nav />
         <Routes>
-          <Route path="/" exact component={Profile} />
+          <Route path="/" exact component={Rockets} />
         </Routes>
       </Router>
     </Provider>

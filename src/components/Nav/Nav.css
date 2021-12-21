@@ -43,8 +43,12 @@ span {
 .links-container a {
 	margin-left: 1em;
 	font-size: 1.2em;
-	color: #4d96fb;
+	color: #000;
 	text-decoration: none;
 	font-family: 'Roboto', sans-serif;
-	
+}
+
+.active {
+	text-decoration: underline;
+	color: #4d98fd;
 }
