@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav/Nav';
 import store from './redux/configurateStore';
 import Rockets from './components/Rockets/Rockets';
+import Mission from './components/Missions/Missions';
+import Profile from './components/Profile/Profile';
 
 function App() {
   return (
@@ -10,7 +12,9 @@ function App() {
       <Router>
         <Nav />
         <Routes>
-          <Route path="/" exact component={Rockets} />
+          <Route path="/" exact element={<Rockets />} />
+          <Route path="/missions" element={<Mission />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </Router>
     </Provider>
