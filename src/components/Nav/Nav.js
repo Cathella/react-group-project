@@ -8,12 +8,12 @@ const Nav = () => (
     <nav>
       <Link to="/" className="logo">
         <img src={logo} className="logo-img" alt="Logo" />
-        <span>Space Travelers Hub</span>
+        <span className="title">Space Travelers Hub</span>
       </Link>
       <div className="links-container">
         <Link to="/Rockets" className="links">Rockets</Link>
         <Link to="/Missions" className="links">Missions</Link>
-        <p> | </p>
+        <p className="para"> | </p>
         <Link to="/" className="links">My Profile</Link>
       </div>
     </nav>

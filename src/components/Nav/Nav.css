@@ -1,6 +1,31 @@
 nav {
 	display: flex;
 	flex-direction: row;
+  border-bottom: 1px solid #000;
+	padding: 0.5rem;
+}
+
+p {
+	margin: 0 0 0 1em;
+	font-size: 1.2rem;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+span {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #000;
+	margin-left: 1em;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+.logo {
+	display: flex;
+	align-items: center;
 }
 
 .logo-img {
@@ -11,6 +36,15 @@ nav {
 .links-container {
 	display: flex;
 	justify-content: flex-end;
-	align-items: space-between;
-	width: 100%;
+	width: 70%;
+	align-items: center;
+}
+
+.links-container a {
+	margin-left: 1em;
+	font-size: 1.2em;
+	color: #4d96fb;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	
 }
