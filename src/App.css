@@ -38,6 +38,8 @@ span {
 .logo {
   display: flex;
   align-items: center;
+  text-decoration: none;
+  color: #777;
 }
 
 .logo img {
@@ -55,8 +57,13 @@ nav li {
   margin: 0 1em;
 }
 
-nav a {
+ul a {
   font-size: 1em;
-  color: #777;
+  color: #007bff;
   text-decoration: none;
+}
+
+.nav-active {
+  text-decoration: underline;
+  color: green;
 }
