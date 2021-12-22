@@ -19,7 +19,7 @@ nav {
 }
 
 span {
-	font-size: 1.5em;
+  font-size: 1.5em;
 	font-weight: bold;
 	color: #000;
 	margin-left: 1em;
@@ -51,8 +51,3 @@ nav a {
 	color: #777;
 	text-decoration: none;
 }
-
-/* .active {
-	text-decoration: underline;
-	color: #4d98fd;
-} */
