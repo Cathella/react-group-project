@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Profile = () => (
-  <h2>PROFILE UNDER CONSTRUCTION</h2>
+  <div className="container">
+    <h2>PROFILE UNDER CONSTRUCTION</h2>
+  </div>
 );
 
 export default Profile;

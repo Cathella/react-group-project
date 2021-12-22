@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Rockets = () => (
-  <div>
+  <div className="container">
     <h1>Rockets</h1>
   </div>
 );
