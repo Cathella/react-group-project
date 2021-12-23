@@ -1,7 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { getMissions, listMissions } from '../../redux/missions/missions';
+import Mission from './Mission';
 
-const Mission = () => (
-  <div className="container">This is a missions component</div>
-);
+const Missions = () => {
+  const missions = useSelector((state) => state.missions);
+  const dispatch = useDispatch();
 
-export default Mission;
+  useEffect(() => {
+    listMissions().then((result) => dispatch(getMissions(result)));
+  }, [dispatch]);
+
+  return (
+    <div className="container">
+      <section>
+        {
+          missions.map((mission) => (
+            <Mission
+              key={mission.mission_id}
+              id={mission.mission_id}
+              name={mission.mission_name}
+              description={mission.description}
+            />
+          ))
+        }
+      </section>
+    </div>
+  );
+};
+
+export default Missions;
