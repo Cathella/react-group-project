@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Mission = ({ id, name, description }) => (
-  <article>
-    <p>{id}</p>
-    <p>{name}</p>
-    <p>{description}</p>
-  </article>
+const Mission = ({ name, description }) => (
+  <tr>
+    <td>{name}</td>
+    <td>{description}</td>
+    <td><button type="button">Not a Member</button></td>
+    <td><button type="button">Join Mission</button></td>
+  </tr>
 );
 
 Mission.propTypes = {
-  id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
 };

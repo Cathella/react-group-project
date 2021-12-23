@@ -14,16 +14,27 @@ const Missions = () => {
   return (
     <div className="container">
       <section>
-        {
-          missions.map((mission) => (
-            <Mission
-              key={mission.mission_id}
-              id={mission.mission_id}
-              name={mission.mission_name}
-              description={mission.description}
-            />
-          ))
-        }
+        <table>
+          <thead>
+            <tr>
+              <th>Mission</th>
+              <th>Description</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              missions.map((mission) => (
+                <Mission
+                  key={mission.mission_id}
+                  id={mission.mission_id}
+                  name={mission.mission_name}
+                  description={mission.description}
+                />
+              ))
+            }
+          </tbody>
+        </table>
       </section>
     </div>
   );
