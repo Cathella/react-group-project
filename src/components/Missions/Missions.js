@@ -14,7 +14,7 @@ const Missions = () => {
   return (
     <div className="container">
       <section>
-        <table>
+        <table className="table">
           <thead>
             <tr>
               <th>Mission</th>
