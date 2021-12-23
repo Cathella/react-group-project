@@ -1,6 +1,12 @@
 const GET_MISSIONS = 'missionStore/missions/GET_MISSIONS';
+const JOIN_MISSION = 'missionStore/missions/JOIN_MISSION';
 
 const initialState = [];
+
+export const joinMission = (payload) => ({
+  type: JOIN_MISSION,
+  payload,
+});
 
 export const getMissions = (payload) => ({
   type: GET_MISSIONS,
@@ -18,6 +24,13 @@ const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_MISSIONS:
       return action.payload;
+    case JOIN_MISSION:
+      return state.map((mission) => {
+        if (mission.mission_id !== action.payload) {
+          return mission;
+        }
+        return { ...mission, status: true };
+      });
     default:
       return state;
   }
