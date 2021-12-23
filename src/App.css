@@ -73,7 +73,12 @@ table {
   border-width: 1px 0;
 }
 
-tbody, td, tfoot, th, thead, tr {
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
   border-color: inherit;
   border-style: solid;
 }
@@ -86,8 +91,9 @@ tr {
   border-top: 2px solid #777;
 }
 
-th, td {
-  padding: .5rem .5rem;
+th,
+td {
+  padding: 0.5rem 0.5rem;
 }
 
 th {
