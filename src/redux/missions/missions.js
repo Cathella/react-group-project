@@ -11,7 +11,7 @@ export const listMissions = async () => {
   const url = 'https://api.spacexdata.com/v3/missions';
   const response = await fetch(url);
   const missions = await response.json();
-  console.log(missions);
+  return missions;
 };
 
 const missionsReducer = (state = initialState, action) => {
