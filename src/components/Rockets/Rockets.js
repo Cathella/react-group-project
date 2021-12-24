@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import { useDispatch, useSelector } from 'react-redux';
 import Typography from '@material-ui/core/Typography';
 import { fetchRockets } from '../../redux/rockets/rockets';
-
 import RocketCard from './RocketCard';
 
 const useStyles = makeStyles((theme) => ({
@@ -46,4 +45,3 @@ const index = () => {
 };
 
 export default index;
-

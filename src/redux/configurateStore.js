@@ -1,15 +1,14 @@
-import { createStore, combineReducers, applyMiddleware } from 'redux';
-import logger from 'redux-logger';
+import {
+  createStore, combineReducers, applyMiddleware, compose,
+} from 'redux';
+// import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-import missionsReducer from './missions/missions';
+import { rocketsReducer } from './rockets/rockets';
 
 const reducer = combineReducers({
-  missions: missionsReducer,
+  rocketsReducer,
 });
-
-const store = createStore(
-  reducer,
-  applyMiddleware(thunk, logger),
-);
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
 export default store;
