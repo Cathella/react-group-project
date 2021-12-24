@@ -27,7 +27,7 @@ nav {
   justify-content: space-between;
 }
 
-span {
+.logo span {
   font-size: 1.5em;
   font-weight: bold;
   color: #000;
@@ -104,7 +104,7 @@ td.description {
   width: 50%;
 }
 
-span.badge {
+.badge {
   padding: 0.4rem 0.5rem;
   border-radius: 5px;
   background: #777;
@@ -113,13 +113,39 @@ span.badge {
   font-size: 0.8rem;
 }
 
-td button {
-  padding: 0.65rem 0.8rem;
+.badge-active {
+  padding: 0.4rem 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.8rem;
+  background: #18a2b8;
+  text-transform: capitalize;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(240, 240, 240);
+}
+
+button {
+  cursor: pointer;
+}
+
+.button-join {
+  font-size: 1rem;
+  background: transparent;
   border-radius: 5px;
   border: 1px solid #777;
-  background: transparent;
   color: #777;
-  font-weight: bold;
+  text-align: center;
+  padding: 0.4rem 0.6rem;
+}
+
+.button-active {
   font-size: 1rem;
-  cursor: pointer;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #dc3645;
+  color: #dc3645;
+  text-align: center;
+  padding: 0.4rem 0.6rem;
 }

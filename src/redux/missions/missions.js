@@ -22,13 +22,16 @@ export const getMissions = (payload) => ({
 export const listMissions = async () => {
   const url = 'https://api.spacexdata.com/v3/missions';
   const response = await fetch(url);
-  const missions = await response.json();
-  return missions;
+  const data = await response.json();
+  return data;
 };
 
 const missionsReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_MISSIONS:
+      if (state !== initialState) {
+        return state;
+      }
       return action.payload;
     case JOIN_MISSION:
       return state.map((mission) => {
