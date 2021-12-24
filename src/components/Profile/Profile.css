@@ -1,0 +1,24 @@
+.my-profile {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-profile section {
+  flex-basis: 47%;
+}
+
+.my-profile h2 {
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.my-profile ul {
+  list-style: none;
+  border-top: 1px solid #ddd;
+}
+
+.my-profile li {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-top: 0;
+}
