@@ -1,13 +1,21 @@
-import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Provider, useDispatch } from 'react-redux';
 import Nav from './components/Nav/Nav';
 import store from './redux/configurateStore';
 import Rockets from './components/Rockets/Rockets';
 import Mission from './components/Missions/Missions';
 import Profile from './components/Profile/Profile';
+import { fetchRockets } from './redux/rockets/rockets';
 import './App.css';
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchRockets());
+  }, []);
+
   return (
     <Provider store={store}>
       <Router>
