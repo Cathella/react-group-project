@@ -1,13 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {PropTypes as MobxPropTypes} from 'mobx-react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import { CardActions } from '@material-ui/core';
+import { CardActions, Chip } from '@material-ui/core';
 import Button from '@material-ui/core/Button';
+import DoneIcon from '@material-ui/icons/Done';
+
+import { useDispatch } from 'react-redux';
+import { cancelRockets, reserveRockets } from '../../redux/rockets/rockets';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,6 +44,15 @@ const useStyles = makeStyles((theme) => ({
 
 const RocketCard = ({ data }) => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+
+  const handleReservation = (rocketID) => {
+    dispatch(reserveRockets(rocketID));
+  };
+  const handleCancelation = (rocketID) => {
+    dispatch(cancelRockets(rocketID));
+  };
+
   return (
     <Card className={classes.root}>
       <CardMedia
@@ -53,15 +65,38 @@ const RocketCard = ({ data }) => {
           <Typography component="h5" variant="h5">
             {data.rocket_name}
           </Typography>
+
           <Typography variant="subtitle1" color="textSecondary">
+            {data.reserved && (
+              <Chip
+                icon={<DoneIcon />}
+                color="primary"
+                size="small"
+                label="Reserved"
+              />
+            )}
             {data.description}
           </Typography>
         </CardContent>
         <div className={classes.controls}>
           <CardActions>
-            <Button size="small" color="primary">
-              Reserve Rocket
-            </Button>
+            {data.reserved === true ? (
+              <Button
+                size="small"
+                color="primary"
+                onClick={() => handleCancelation(data.id)}
+              >
+                Cancel Reservation
+              </Button>
+            ) : (
+              <Button
+                size="small"
+                color="primary"
+                onClick={() => handleReservation(data.id)}
+              >
+                Reserve
+              </Button>
+            )}
           </CardActions>
         </div>
       </div>

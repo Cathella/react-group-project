@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Container, Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Typography from '@material-ui/core/Typography';
-import { fetchRockets } from '../../redux/rockets/rockets';
+
 import RocketCard from './RocketCard';
 
 const useStyles = makeStyles((theme) => ({
@@ -16,11 +16,7 @@ const useStyles = makeStyles((theme) => ({
 
 const index = () => {
   const classes = useStyles();
-  const dispatch = useDispatch();
   const rockets = useSelector((state) => state.rocketsReducer.rockets);
-  useEffect(() => {
-    dispatch(fetchRockets());
-  }, []);
 
   return (
     <>
