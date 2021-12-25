@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useEffect } from 'react';
-import { Provider, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import Nav from './components/Nav/Nav';
 import store from './redux/configurateStore';
 import Rockets from './components/Rockets/Rockets';
@@ -17,18 +17,15 @@ function App() {
   }, []);
 
   return (
-    <Provider store={store}>
-      <Router>
-        <Nav />
-        <Routes>
-          <Route path="/" exact element={<Rockets />} />
-          <Route path="/rockets" element={<Rockets />} />
-          <Route path="/missions" element={<Mission />} />
-          <Route path="/profile" element={<Profile />} />
-        </Routes>
-      </Router>
-    </Provider>
-
+    <Router>
+      <Nav />
+      <Routes>
+        <Route path="/" exact element={<Rockets />} />
+        <Route path="/rockets" element={<Rockets />} />
+        <Route path="/missions" element={<Mission />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </Router>
   );
 }
 
