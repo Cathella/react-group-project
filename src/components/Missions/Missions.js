@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getMissions, listMissions } from '../../redux/missions/missions';
+import { listMissions, getMissions } from '../../redux/missions/missions';
 import Mission from './Mission';
 
 const Missions = () => {
@@ -9,7 +9,7 @@ const Missions = () => {
 
   useEffect(() => {
     listMissions().then((result) => dispatch(getMissions(result)));
-  }, [dispatch]);
+  }, []);
 
   return (
     <div className="container">
@@ -20,16 +20,15 @@ const Missions = () => {
               <th>Mission</th>
               <th>Description</th>
               <th>Status</th>
+              <th aria-label="none" />
             </tr>
           </thead>
           <tbody>
             {
               missions.map((mission) => (
                 <Mission
-                  key={mission.mission_id}
-                  id={mission.mission_id}
-                  name={mission.mission_name}
-                  description={mission.description}
+                  key={missions.id}
+                  data={mission}
                 />
               ))
             }
