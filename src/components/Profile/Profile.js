@@ -3,7 +3,7 @@ import { Container, Grid, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import { useSelector } from 'react-redux';
-// import ListProfile from './ListProfile';
+import ListProfile from './ListProfile';
 
 const useStyles = makeStyles((theme) => ({
   paperTitle: {
@@ -20,7 +20,6 @@ const Profile = () => {
     return acc;
   },
   []));
-  const dr = useSelector((state) => (state.dragons.filter((dragon) => dragon.reserved === true)));
   const missions = useSelector((state) => state.missions.reduce((acc, item) => {
     if (item.reserved) return acc.concat({ id: item.mission_id, name: item.mission_name });
     return acc;
@@ -44,14 +43,6 @@ const Profile = () => {
                 My Rockets
               </Typography>
               <ListProfile data={rockets} />
-            </Paper>
-          </Grid>
-          <Grid item xs={4}>
-            <Paper elevation={1}>
-              <Typography component="h4" variant="h4">
-                My Dragons
-              </Typography>
-              <ListProfile data={dr} />
             </Paper>
           </Grid>
           <Grid item xs={4}>
