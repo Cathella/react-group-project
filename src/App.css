@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  padding: 1rem 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.container {
+  padding: 2em 0;
+}
+
+.container,
+nav {
+  width: 80%;
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo span {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000;
+  margin-left: 1em;
+  text-align: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #777;
+}
+
+.logo img {
+  width: 45px;
+  height: auto;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 1em;
+}
+
+ul a {
+  font-size: 1em;
+  color: #007bff;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #212529;
+  vertical-align: top;
+  border-color: #dee2e6;
+  border-collapse: collapse;
+  border-width: 1px 0;
+}
+
+tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+  border-color: inherit;
+  border-style: solid;
+}
+
+tr {
+  text-align: left;
+}
+
+.table > :not(:first-child) {
+  border-top: 2px solid #777;
+}
+
+th,
+td {
+  padding: 0.5rem 0.5rem;
+}
+
+th {
+  padding: 1rem 0.5rem;
+}
+
+td.description {
+  width: 50%;
+}
+
+.badge {
+  padding: 0.4rem 0.5rem;
+  border-radius: 5px;
+  background: #777;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.badge-active {
+  padding: 0.4rem 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.8rem;
+  background: #18a2b8;
+  text-transform: capitalize;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(240, 240, 240);
+}
+
+button {
+  cursor: pointer;
+}
+
+.button-join {
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #777;
+  color: #777;
+  text-align: center;
+  padding: 0.4rem 0.6rem;
+}
+
+.button-active {
+  font-size: 1rem;
+  background: transparent;
+  border-radius: 5px;
+  border: 1px solid #dc3645;
+  color: #dc3645;
+  text-align: center;
+  padding: 0.4rem 0.6rem;
+}
