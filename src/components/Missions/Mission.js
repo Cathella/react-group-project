@@ -21,8 +21,9 @@ const Mission = (props) => {
   const changeStatus = () => {
     if (status === true) {
       leaveButton();
+    } else {
+      joinButton();
     }
-    joinButton();
   };
 
   return (
